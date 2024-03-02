@@ -10,16 +10,20 @@ func main() {
 
 	card2 := newCard()
 
-	cards := []string{newCard(), "Ace of Diamonds"} // slice init
+	fmt.Println(card)
+	fmt.Println(card2)
+
+	cards := deck{newCard(), "Ace of Diamonds"}
+	fmt.Println(cards)
+
 	cards = append(cards, "Six of Spades")
 
 	for i, v := range cards {
 		fmt.Println(i, v)
 	}
 
-	fmt.Println(card)
-	fmt.Println(card2)
-	fmt.Println(cards)
+	cards.print()
+
 }
 
 func newCard() string {
